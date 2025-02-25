@@ -32,10 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.txtModelo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,57 +39,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvVehiculos = new System.Windows.Forms.DataGridView();
-            this.txtModulo = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtBuscar.Location = new System.Drawing.Point(776, 152);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(199, 27);
-            this.txtBuscar.TabIndex = 161;
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtModelo.Location = new System.Drawing.Point(808, 123);
-            this.txtModelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(199, 27);
-            this.txtModelo.TabIndex = 160;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(627, 126);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 20);
-            this.label8.TabIndex = 159;
-            this.label8.Text = "Modelo";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtEstado.Location = new System.Drawing.Point(902, 188);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(199, 27);
-            this.txtEstado.TabIndex = 158;
             // 
             // label9
             // 
@@ -166,17 +122,6 @@
             this.txtMarca.Size = new System.Drawing.Size(199, 27);
             this.txtMarca.TabIndex = 150;
             // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.ForeColor = System.Drawing.Color.White;
-            this.lblBuscar.Location = new System.Drawing.Point(639, 160);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(100, 20);
-            this.lblBuscar.TabIndex = 149;
-            this.lblBuscar.Text = "Buscar:";
-            // 
             // btnLimpiar
             // 
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
@@ -237,21 +182,6 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(980, 148);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(48, 33);
-            this.btnBuscar.TabIndex = 143;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -279,6 +209,7 @@
             this.btnAgregar.TabIndex = 144;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dgvVehiculos
             // 
@@ -324,14 +255,14 @@
             this.dgvVehiculos.Size = new System.Drawing.Size(971, 283);
             this.dgvVehiculos.TabIndex = 142;
             // 
-            // txtModulo
+            // txtModelo
             // 
-            this.txtModulo.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtModulo.Location = new System.Drawing.Point(172, 117);
-            this.txtModulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtModulo.Name = "txtModulo";
-            this.txtModulo.Size = new System.Drawing.Size(199, 27);
-            this.txtModulo.TabIndex = 162;
+            this.txtModelo.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
+            this.txtModelo.Location = new System.Drawing.Point(172, 117);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(199, 27);
+            this.txtModelo.TabIndex = 162;
             // 
             // cmbEstado
             // 
@@ -349,11 +280,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1113, 644);
             this.Controls.Add(this.cmbEstado);
-            this.Controls.Add(this.txtModulo);
-            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.txtModelo);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label5);
@@ -361,12 +288,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMarca);
-            this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvVehiculos);
@@ -380,11 +305,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.TextBox txtModelo;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label5;
@@ -392,16 +312,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvVehiculos;
-        private System.Windows.Forms.TextBox txtModulo;
+        private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.ComboBox cmbEstado;
     }
 }
