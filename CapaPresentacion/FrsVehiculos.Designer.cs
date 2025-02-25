@@ -51,11 +51,9 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.picBoxVolver = new System.Windows.Forms.PictureBox();
             this.dgvVehiculos = new System.Windows.Forms.DataGridView();
             this.txtModulo = new System.Windows.Forms.TextBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,9 +199,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(430, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(394, 50);
+            this.label1.Size = new System.Drawing.Size(301, 50);
             this.label1.TabIndex = 140;
-            this.label1.Text = "TRANSPORTES ";
+            this.label1.Text = "Vehiculos";
             // 
             // btnEliminar
             // 
@@ -281,19 +279,6 @@
             this.btnAgregar.TabIndex = 144;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // picBoxVolver
-            // 
-            this.picBoxVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBoxVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBoxVolver.Image = ((System.Drawing.Image)(resources.GetObject("picBoxVolver.Image")));
-            this.picBoxVolver.Location = new System.Drawing.Point(1019, 31);
-            this.picBoxVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picBoxVolver.Name = "picBoxVolver";
-            this.picBoxVolver.Size = new System.Drawing.Size(35, 34);
-            this.picBoxVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxVolver.TabIndex = 147;
-            this.picBoxVolver.TabStop = false;
             // 
             // dgvVehiculos
             // 
@@ -384,11 +369,10 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.picBoxVolver);
             this.Controls.Add(this.dgvVehiculos);
             this.Name = "FrsVehiculos";
             this.Text = "FormVehiculos";
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxVolver)).EndInit();
+            this.Load += new System.EventHandler(this.FrsVehiculos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -416,7 +400,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.PictureBox picBoxVolver;
         private System.Windows.Forms.DataGridView dgvVehiculos;
         private System.Windows.Forms.TextBox txtModulo;
         private System.Windows.Forms.ComboBox cmbEstado;
