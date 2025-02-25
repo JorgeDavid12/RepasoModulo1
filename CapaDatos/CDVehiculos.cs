@@ -61,6 +61,22 @@ namespace CapaDatos
             return vContarRegistrosAfectados;
         }
 
+        public int CP_mtdEliminarVh(int codigo)
+        {
+            int vCantidadRegistrosEliminados = 0;
+
+            string vUspEliminarVh = "uspVehiculosDelete";
+            SqlCommand commEliminarVh = new SqlCommand(vUspEliminarVh, conexion.MtdAbrirConexion());
+            commEliminarVh.CommandType = CommandType.StoredProcedure;
+
+            commEliminarVh.Parameters.AddWithValue("@VehiculoID", codigo);
+
+            vCantidadRegistrosEliminados = commEliminarVh.ExecuteNonQuery();
+            conexion.MtdCerrarConexion();
+            return vCantidadRegistrosEliminados;
+        }
+
+
 
     }
 }

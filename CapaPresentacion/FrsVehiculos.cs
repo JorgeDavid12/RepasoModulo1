@@ -71,5 +71,32 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.StackTrace, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try {
+
+                int codigo = int.Parse(txtIDVh.Text);
+                int vCantidadRegistros = cdVehiculos.CP_mtdEliminarVh(codigo);
+                MtdMostrarVehiculos();
+                MessageBox.Show("Registro Eliminado!!", "Correcto!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex){
+
+                MessageBox.Show("No se encontró codigo!!", "Error eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIDVh.Text = dgvVehiculos.SelectedCells[0].Value.ToString();
+            txtMarca.Text = dgvVehiculos.SelectedCells[1].Value.ToString();
+            txtModelo.Text = dgvVehiculos.SelectedCells[2].Value.ToString();
+            txtAño.Text = dgvVehiculos.SelectedCells[3].Value.ToString();
+            txtPrecio.Text = dgvVehiculos.SelectedCells[4].Value.ToString();
+            cmbEstado.Text = dgvVehiculos.SelectedCells[5].Value.ToString();
+        }
     }
 }
