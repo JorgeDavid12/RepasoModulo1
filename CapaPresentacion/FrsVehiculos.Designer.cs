@@ -38,7 +38,7 @@
             this.txtAño = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtIDVh = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -48,6 +48,8 @@
             this.dgvVehiculos = new System.Windows.Forms.DataGridView();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtPrecio.Location = new System.Drawing.Point(172, 181);
+            this.txtPrecio.Location = new System.Drawing.Point(567, 119);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(199, 27);
@@ -76,7 +78,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(58, 188);
+            this.label5.Location = new System.Drawing.Point(453, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 20);
             this.label5.TabIndex = 155;
@@ -113,14 +115,14 @@
             this.label3.TabIndex = 151;
             this.label3.Text = "Modelo:";
             // 
-            // txtMarca
+            // txtIDVh
             // 
-            this.txtMarca.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
-            this.txtMarca.Location = new System.Drawing.Point(172, 86);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(199, 27);
-            this.txtMarca.TabIndex = 150;
+            this.txtIDVh.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
+            this.txtIDVh.Location = new System.Drawing.Point(172, 86);
+            this.txtIDVh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDVh.Name = "txtIDVh";
+            this.txtIDVh.Size = new System.Drawing.Size(199, 27);
+            this.txtIDVh.TabIndex = 150;
             // 
             // btnLimpiar
             // 
@@ -181,6 +183,7 @@
             this.btnActualizar.TabIndex = 145;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // label2
             // 
@@ -189,9 +192,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(58, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 141;
-            this.label2.Text = "Marca:";
+            this.label2.Text = "ID:";
             // 
             // btnAgregar
             // 
@@ -268,10 +271,30 @@
             // 
             this.cmbEstado.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(559, 85);
+            this.cmbEstado.Location = new System.Drawing.Point(567, 86);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(199, 28);
             this.cmbEstado.TabIndex = 163;
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
+            this.txtMarca.Location = new System.Drawing.Point(567, 152);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(199, 27);
+            this.txtMarca.TabIndex = 165;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(453, 159);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 20);
+            this.label6.TabIndex = 164;
+            this.label6.Text = "Marca:";
             // 
             // FrsVehiculos
             // 
@@ -279,6 +302,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1113, 644);
+            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.label9);
@@ -287,7 +312,7 @@
             this.Controls.Add(this.txtAño);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtIDVh);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
@@ -311,7 +336,7 @@
         private System.Windows.Forms.TextBox txtAño;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtIDVh;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEliminar;
@@ -321,6 +346,8 @@
         private System.Windows.Forms.DataGridView dgvVehiculos;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.Label label6;
     }
 }
 

@@ -35,7 +35,32 @@ namespace CapaDatos
             cmd_InsertarVehiculos.Parameters.AddWithValue("@Precio", Precio);
             cmd_InsertarVehiculos.Parameters.AddWithValue("@Estado", Estado);
             cmd_InsertarVehiculos.ExecuteNonQuery();
+
+            conexion.MtdCerrarConexion();
+
         }
+
+        public int CP_mtdActualizarVh(int VehiculoID, string Marca, string Modelo, int Año, decimal Precio, string Estado)
+        {
+            int vContarRegistrosAfectados = 0;
+
+            string vUspActualizarVh = "uspVehiculosUpdate";
+            SqlCommand commActualizarVh = new SqlCommand(vUspActualizarVh, conexion.MtdAbrirConexion());
+            commActualizarVh.CommandType = CommandType.StoredProcedure;
+
+            commActualizarVh.Parameters.AddWithValue("@VehiculoID", VehiculoID);
+            commActualizarVh.Parameters.AddWithValue("@Marca", Marca);
+            commActualizarVh.Parameters.AddWithValue("@Modelo", Modelo);
+            commActualizarVh.Parameters.AddWithValue("@Año", Año);
+            commActualizarVh.Parameters.AddWithValue("@Precio", Precio);
+            commActualizarVh.Parameters.AddWithValue("@Estado", Estado);
+
+            vContarRegistrosAfectados = commActualizarVh.ExecuteNonQuery();
+
+             conexion.MtdCerrarConexion();
+            return vContarRegistrosAfectados;
+        }
+
 
     }
 }
