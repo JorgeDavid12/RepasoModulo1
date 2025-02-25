@@ -98,5 +98,15 @@ namespace CapaPresentacion
             txtPrecio.Text = dgvVehiculos.SelectedCells[4].Value.ToString();
             cmbEstado.Text = dgvVehiculos.SelectedCells[5].Value.ToString();
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtIDVh.Text = "";
+            txtModelo.Text = "";
+            txtAño.Text = "";
+            cmbEstado.Text = "";
+            txtPrecio.Text = "";
+            txtMarca.Text = "";
+        }
     }
 }

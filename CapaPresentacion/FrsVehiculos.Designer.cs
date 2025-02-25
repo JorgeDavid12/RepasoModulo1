@@ -138,6 +138,7 @@
             this.btnLimpiar.Size = new System.Drawing.Size(79, 47);
             this.btnLimpiar.TabIndex = 148;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // label1
             // 
@@ -273,6 +274,9 @@
             // 
             this.cmbEstado.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold);
             this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Disponible",
+            "Agotado"});
             this.cmbEstado.Location = new System.Drawing.Point(567, 86);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(199, 28);
